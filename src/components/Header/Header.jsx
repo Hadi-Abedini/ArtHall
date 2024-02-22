@@ -5,7 +5,7 @@ import textContent from "../../constants/string";
 function Header() {
   return (
     <div className="w-full flex justify-center items-center bg-white bg-opacity-15">
-      <div className="flex w-3/4 gap-5 py-5">
+      <div className="flex w-3/4 max-w-[1152px] gap-5 py-5">
         <NavLink className="" to={"/"}>{textContent.header_taskList_btn}</NavLink>
         <NavLink to={"/task"}>{textContent.header_addTask_btn}</NavLink>
       </div>

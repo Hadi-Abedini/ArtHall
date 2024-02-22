@@ -16,3 +16,7 @@
     font-family: vazir-regular;
     src: url(./assets/fonts/Vazirmatn-Regular.ttf);
 }
+
+.active {
+    color: #F1C400;
+}
