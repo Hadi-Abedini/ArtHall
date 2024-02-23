@@ -12,8 +12,7 @@ function CategorySelect({ id, label, options }) {
         labelId="select-label"
         id={id}
         sx={{ color: "white", label: { color: "#ffffff87" } }}
-        disableUnderline
-        >
+        disableUnderline>
         {options.map((option) => {
           return <option value={option.value}>{option.title}</option>;
         })}
