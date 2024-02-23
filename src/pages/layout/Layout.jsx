@@ -6,7 +6,7 @@ function Layout() {
   return (
     <div className="w-full h-[100vh] bg-primary">
         <Header/>
-      <main>
+      <main className="h-[80%]">
         <Outlet />
       </main>
     </div>

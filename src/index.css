@@ -17,6 +17,10 @@
     src: url(./assets/fonts/Vazirmatn-Regular.ttf);
 }
 
+*{
+    font-family: vazir-regular;
+    box-sizing: border-box;
+}
 .active {
     color: #F1C400;
 }
