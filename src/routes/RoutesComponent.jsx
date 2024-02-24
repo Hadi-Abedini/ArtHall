@@ -2,6 +2,7 @@ import React from "react";
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "../pages/layout/Layout";
 import AddTask from "../pages/addTask/AddTask";
+import TaskList from "../pages/taskList/TaskList";
 
 const routes = createBrowserRouter([
   {
@@ -11,7 +12,9 @@ const routes = createBrowserRouter([
       {
         index: true,
         element: (
-          <React.Suspense fallback={<>...</>}>//task list</React.Suspense>
+          <React.Suspense fallback={<>...</>}>
+            <TaskList />
+          </React.Suspense>
         ),
       },
       {

@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+
+import TaskTable from "../../components/TaskTable/TaskTable";
 
 function TaskList() {
   return (
-    <div>TaskList</div>
-  )
+    <div className="w-3/5">
+      
+      <TaskTable/>
+    </div>
+  );
 }
 
-export default TaskList
+export default TaskList;
