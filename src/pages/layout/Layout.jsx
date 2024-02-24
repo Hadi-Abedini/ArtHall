@@ -1,6 +1,16 @@
 import React from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import Header from "../../components/Header/Header";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 100,
+    },
+  },
+});
 
 function Layout() {
   const location = useLocation();
@@ -14,7 +24,10 @@ function Layout() {
               {location.pathname === "/task" ? "افزودن" : "لیست"}
             </h1>
             <div className="w-full justify-center items-center flex">
-              <Outlet />
+              <QueryClientProvider client={queryClient}>
+                <ReactQueryDevtools />
+                <Outlet />
+              </QueryClientProvider>
             </div>
           </div>
         </div>

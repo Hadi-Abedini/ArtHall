@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Box, IconButton, InputBase } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
-function SearchInput({ setSearchValue }) {
+function SearchInput({ data, setData }) {
   const [formValues, setFormValues] = useState("");
 
   const handleInputBaseChange = (event) => {
@@ -11,7 +11,10 @@ function SearchInput({ setSearchValue }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSearchValue(formValues);
+    const filteredResults = data.filter((item) =>
+      item.title.includes(formValues)
+    );
+    setData(filteredResults);
   };
   return (
     <form

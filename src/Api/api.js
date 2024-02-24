@@ -31,4 +31,4 @@ const getTasks = async () => {
     }
 };
 
-export { addNewTask, getTasks  }
+export { addNewTask, getTasks }
