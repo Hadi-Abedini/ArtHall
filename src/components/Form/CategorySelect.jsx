@@ -1,4 +1,4 @@
-import { FormControl, InputLabel, NativeSelect } from "@mui/material";
+import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 
 function CategorySelect({ id, label, options }) {
   return (
@@ -8,15 +8,31 @@ function CategorySelect({ id, label, options }) {
       <InputLabel sx={{ color: "#ffffff87" }} id="select-label">
         {label}
       </InputLabel>
-      <NativeSelect
+      <Select
         labelId="select-label"
         id={id}
-        sx={{ color: "white", label: { color: "#ffffff87" } }}
+        sx={{
+          color: "white",
+          backgroundColor: "transparent",
+          ":hover": {
+            backgroundColor: "transparent",
+          },
+          ":focus": { backgroundColor: "transparent" },
+          ".MuiSvgIcon-root path": { fill: "white" },
+          ".MuiSvgIcon-root": { backgroundColor: "transparent" },
+        }}
         disableUnderline>
-        {options.map((option) => {
-          return <option value={option.value}>{option.title}</option>;
+        {options.map((option, index) => {
+          return (
+            <MenuItem
+              defaultValue={index === 0 ? true : ""}
+              key={index}
+              value={option.value}>
+              {option.title}
+            </MenuItem>
+          );
         })}
-      </NativeSelect>
+      </Select>
     </FormControl>
   );
 }

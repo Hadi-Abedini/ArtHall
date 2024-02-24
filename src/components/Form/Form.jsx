@@ -48,7 +48,7 @@ function Form() {
               label={"دسته بندی"}
               options={[{ title: "پیشفرض", value: "defult" }]}
             />
-            <TextArea id={"description"} label={"توضیحات"} rows={4} />
+            <TextArea id={"description"} label={"شرح"} rows={4} />
             <div className="w-full col-span-2 flex justify-end">
               <SubmitButton type="submit">ذخیره</SubmitButton>
             </div>
