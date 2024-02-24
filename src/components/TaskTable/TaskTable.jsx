@@ -13,7 +13,7 @@ function TaskTable({ rows, columns }) {
           border: "none",
           color: "white",
           textAlign: "right",
-          fontSize: "13px",
+          fontSize: "10px",
         },
         ".css-yrdy0g-MuiDataGrid-columnHeaderRow": {
           width: "100%",

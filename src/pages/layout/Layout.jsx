@@ -19,7 +19,7 @@ function Layout() {
       <Header />
       <main className="w-full h-[80%]">
         <div className="w-full h-full flex justify-center items-center">
-          <div className="w-3/5 flex flex-col gap-14">
+          <div className="w-3/5 h-full flex justify-center flex-col gap-5">
             <h1 className="text-3xl text-white">
               {location.pathname === "/task" ? "افزودن" : "لیست"}
             </h1>

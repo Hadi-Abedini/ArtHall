@@ -20,7 +20,7 @@ function TaskList() {
   const [filterdData, setFilterdData] = useState();
   return (
     <div className="w-3/5 flex flex-col gap-4">
-      <div className="w-1/4 flex text-sm justify-between text-white">
+      <div className="w-1/4 flex text-xs justify-between text-white">
         <span className="font-[vazir-semibold] border-b-2 border-[#F1C400] p-1">
           پیش فرض
         </span>
