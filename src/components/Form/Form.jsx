@@ -5,8 +5,9 @@ import TextInput from "./TextInput";
 import CategorySelect from "./CategorySelect";
 import TextArea from "./TextArea";
 import { FormContext } from "../../context/FormContext";
+import { addNewTask } from "../../Api/api";
 
-const customTheme = (outerTheme) =>
+const customTheme = () =>
   createTheme({
     direction: "rtl",
     typography: {
@@ -29,10 +30,9 @@ const SubmitButton = styled(Button)(() => ({
 function Form() {
   const [formValues, setFormValues] = useState({});
 
-  const handleSubmit = (e) => {
-    console.log(formValues);
+  const handleSubmit = () => {
+    addNewTask(formValues);
   };
-
   return (
     <>
       <ThemeProvider theme={customTheme()}>
@@ -40,8 +40,8 @@ function Form() {
           onSubmit={handleSubmit}
           className="w-[65%] grid grid-cols-2 gap-3">
           <FormContext.Provider value={{ formValues, setFormValues }}>
-            <TextInput id={"short-description"} label={"عنوان"} />
-            <TextInput id={"task-title"} label={"توضیح کوتاه"} />
+            <TextInput id={"title"} label={"عنوان"} />
+            <TextInput id={"short-description"} label={"توضیح کوتاه"} />
             <TextInput id={"date"} type={"date"} />
             <CategorySelect
               id={"category"}

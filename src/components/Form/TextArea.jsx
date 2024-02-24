@@ -14,12 +14,13 @@ function TextArea({ id, label, rows = 1 }) {
   return (
     <TextField
       className="col-span-2 bg-white bg-opacity-10 rounded-lg"
+      required
       id={id}
       label={label}
       variant="filled"
       multiline
       rows={rows}
-      onchange={handleTextFieldChange}
+      onChange={handleTextFieldChange}
       InputProps={{
         style: {
           borderRadius: "8px",

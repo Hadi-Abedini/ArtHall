@@ -17,6 +17,7 @@ function TextInput({ id, label, type = "text" }) {
       id={id}
       label={label}
       type={type}
+      required
       variant="filled"
       onChange={handleTextFieldChange}
       InputProps={{
