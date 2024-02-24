@@ -51,7 +51,7 @@ function TaskTable() {
             justifyContent: "space-between",
           },
           ".MuiDataGrid-row, .MuiDataGrid-columnHeadersInner": {
-            backgroundColor: "#ffffff28",
+            backgroundColor: "rgba(255, 255, 255, 0.1)",
             width: "100%",
             padding: "1px",
             borderRadius: "8px",
